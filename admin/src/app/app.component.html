@@ -25,6 +25,7 @@
         </li>
       </ul>
     </li>
+  
     <!-- link boat -->
     <li class="nav-item">
       <a class="nav-link collapsed" data-bs-target="#boat-nav" data-bs-toggle="collapse" href="#">
@@ -46,6 +47,29 @@
         </li>
       </ul>
     </li>
+
+     <!-- link trip -->
+     <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#trip-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-people-fill"></i><span>Trip</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul 
+        id="trip-nav"
+        class="nav-content collapse "
+        data-bs-parent="#sidebar-nav">
+        <li>
+          <a routerLink="/trips">
+            <i class="bi bi-circle"></i><span>Lists</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/trip/create">
+            <i class="bi bi-circle"></i><span>Create</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    
     
     <!-- End Components Nav -->
 
