@@ -16,11 +16,12 @@
     &__heading{
         background-color: #fff;
         border-radius: 5px;
-        display: flex;
+        width: 100%;
+        padding: 25px;
     }
 
     &__stats{
-        border-right: solid 1px #ccc;
+        padding: 10px;
     }
 
     &__stat-name{
@@ -31,6 +32,54 @@
     &__stat-num{
         font-size: 32px;
         font-weight: 500;
-        color: #ccc;
+        color: #000;
+    }
+
+    &__trips{
+        margin-top: 45px;
+        background-color: #fff;
+        border-radius: 5px;
+        width: 100%;
+        padding: 25px;
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        &-list{
+
+        }
+    }
+
+    &__paiement-heading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    &__paiement-title{
+        font-size: 22px;
+    }
+
+    &__percentage-title{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    &__percentage-subtitle{
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__percentage-text {
+        font-size: 14px;
+        text-align: center;
+        width: 50%;
+        margin: auto;
     }
 }

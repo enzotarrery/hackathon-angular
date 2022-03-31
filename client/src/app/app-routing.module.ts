@@ -14,11 +14,6 @@ const routes: Routes = [
   {
     path: 'dashboard',
     canActivate: [GuardGuard],
-<<<<<<< HEAD
-    component: DashboardComponent
-  }
-
-=======
     component: DashboardComponent,
   },
   {
@@ -29,7 +24,6 @@ const routes: Routes = [
     path: 'logout',
     component: LogoutComponent,
   },
->>>>>>> 1abb8b7d06f26a82797617768d7d32754e33d6c1
 ];
 
 @NgModule({
