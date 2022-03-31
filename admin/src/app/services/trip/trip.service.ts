@@ -41,6 +41,6 @@ export class TripService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.apiKey}`,
     };
-    return this.httpClient.get(`${this.url}/${id}`, { headers: opts })
+    return this.httpClient.get(`${this.url}/${id}?populate=%2A`, { headers: opts })
   }
 }

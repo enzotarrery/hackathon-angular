@@ -6,5 +6,5 @@ export interface Trips {
   destination: string,
   departure: string,
   state: string,
-  boats: Boats,
+  boat: Boats,
 }
