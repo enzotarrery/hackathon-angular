@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stuffs",
+  "info": {
+    "singularName": "stuff",
+    "pluralName": "stuffs",
+    "displayName": "Stuff"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "stuff_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::stuff-type.stuff-type",
+      "inversedBy": "stuffs"
+    },
+    "weight": {
+      "type": "integer"
+    },
+    "volume": {
+      "type": "integer"
+    }
+  }
+}
