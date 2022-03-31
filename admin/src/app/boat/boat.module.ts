@@ -14,11 +14,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { BoatViewComponent } from './boat-view/boat-view.component';
 
 @NgModule({
   declarations: [
     BoatsListComponent,
-    BoatsFormComponent
+    BoatsFormComponent,
+    BoatViewComponent
   ],
   imports: [
     CommonModule,

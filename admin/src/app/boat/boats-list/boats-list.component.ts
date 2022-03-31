@@ -45,7 +45,12 @@ export class BoatsListComponent implements AfterViewInit {
   getBoats() {
     this.boatService.getBoats().subscribe(response => {
      
-      const updatedboat = response.data.map((item: any) => item.attributes)
+      const updatedboat = response.data.map((item: any) => {
+        return {
+          id: item.id,
+          ...item.attributes,
+        }
+      })
       this.dataSource = new MatTableDataSource(updatedboat);
       this.dataSource.paginator = this.paginator;
     });

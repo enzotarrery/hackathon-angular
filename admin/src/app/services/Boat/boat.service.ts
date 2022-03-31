@@ -36,5 +36,12 @@ export class BoatService {
       withCredentials: true
     });
   }
+  getBoatById(id: string) {
+    const opts = {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.apiKey}`,
+    };
+    return this.httpClient.get(`${this.url}/${id}`, { headers: opts })
+  }
 
 }

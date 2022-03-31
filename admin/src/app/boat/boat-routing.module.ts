@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BoatViewComponent } from './boat-view/boat-view.component';
 import { BoatsFormComponent } from './boats-form/boats-form.component';
 import { BoatsListComponent } from './boats-list/boats-list.component';
 
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'create',
     component: BoatsFormComponent
+  },
+  {
+    path: ':id',
+    component: BoatViewComponent
   },
 ];
 
