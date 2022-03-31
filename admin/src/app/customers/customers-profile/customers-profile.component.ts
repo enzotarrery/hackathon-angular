@@ -9,6 +9,7 @@ import { CustomersService } from 'src/app/services/customers.service';
   styleUrls: ['./customers-profile.component.scss']
 })
 export class CustomersProfileComponent implements OnInit {
+  titleBreadcrumb = 'Customers view';
   customer: Customers;
 
   constructor(
@@ -28,7 +29,7 @@ export class CustomersProfileComponent implements OnInit {
       this.customerService.getCustomerById(id).subscribe((response) => {
         this.customer = response as Customers;
       })
-    } else {
+      
     }
   }
 
