@@ -1,4 +1,5 @@
 export interface Boat {
+    id: number,
     name: string,
     length: number,
     width: number,

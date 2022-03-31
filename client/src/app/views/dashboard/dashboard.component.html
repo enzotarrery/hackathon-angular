@@ -3,7 +3,7 @@
     <div class="dashboard-content">
         <h1 class="dashboard-content__title"> Bonjour, </h1>
         <div class="dashboard-content__heading">
-            <app-head [trips]="trips$"></app-head>
+            <app-head></app-head>
         </div>
         <div class="dashboard-content__trips">
             <div class="dashboard-content__trips-heading">
@@ -26,7 +26,7 @@
                         <tr *ngFor="let trip of trips$">
                             <th>{{trip.stuff?.label}}</th>
                             <td>{{trip.boat.name}}</td>
-                            <td>{{trip.price}}</td>
+                            <td>{{trip.stuff?.volume}}€</td>
                             <td>{{trip.stuff?.weight}}</td>
                         </tr>
                     </tbody>
@@ -56,7 +56,7 @@
                             <tbody>
                                 <tr *ngFor="let trip of trips$">
                                     <td>{{trip.stuff?.label}}</td>
-                                    <td>{{trip.price}}</td>
+                                    <td>{{trip.stuff?.volume}}€</td>
                                     <td>{{trip.stuff?.weight}}</td>
                                 </tr>
                             </tbody>
