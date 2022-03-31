@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxWebstorageModule } from 'ngx-webstorage';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +11,15 @@ import { HomeComponent } from './views/home/home.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { NavbarComponent } from './shared/dashboard/navbar/navbar.component';
 import { TripComponent } from './views/trip/trip.component';
-import { HttpClientModule } from  '@angular/common/http';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BoatService } from './core/services/boat.service';
+import { TripService } from './core/services/trip.service';
+import { UserService } from './core/services/user.service';
+import { TokenStorageService } from './core/services/token-storage.service';
+import { LogoutComponent } from './auth/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +30,20 @@ import { HttpClientModule } from  '@angular/common/http';
     DashboardComponent,
     NavbarComponent,
     TripComponent,
+    LoginComponent,
+    RegisterComponent,
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     GoogleMapsModule,
-    HttpClientModule
+    NgxWebstorageModule.forRoot(),
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [BoatService, TripService, UserService, TokenStorageService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

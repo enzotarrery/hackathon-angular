@@ -1,3 +1,11 @@
 <header class="header">
-    <h1>header boilerplate</h1>
+  <h1>header boilerplate</h1>
+  <p *ngIf="this.user">Salut {{ user.username }}</p>
+  <section *ngIf="!this.user">
+    <a routerLink="/register">S'enregistrer</a>
+    <a routerLink="/login">Se connecter</a>
+  </section>
+  <section *ngIf="this.user">
+    <a routerLink="/logout">Se déconnecter</a>
+  </section>
 </header>
