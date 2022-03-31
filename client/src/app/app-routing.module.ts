@@ -6,6 +6,7 @@ import { LogoutComponent } from './auth/logout/logout.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { HomeComponent } from './views/home/home.component';
+import { TripsComponent } from './views/trips/trips.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,16 @@ const routes: Routes = [
   {
     path: 'dashboard',
     canActivate: [GuardGuard],
-    component: DashboardComponent,
+    children: [
+      {
+        path: '',
+        component: DashboardComponent,
+      },
+      {
+        path: 'trips',
+        component: TripsComponent,
+      },
+    ],
   },
   {
     path: 'login',
