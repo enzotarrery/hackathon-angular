@@ -21,4 +21,11 @@ export class CustomersService {
     };
     return this.httpClient.get(`${this.url}`, { headers: opts });
   }
+  getCustomerById(id: string) {
+    const opts = {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.apiKey}`,
+    };
+    return this.httpClient.get(`${this.url}/${id}`, { headers: opts })
+  }
 }

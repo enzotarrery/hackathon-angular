@@ -49,6 +49,6 @@ export class CustomersListComponent implements AfterViewInit {
     console.log($event, 'event')
   }
   onRowClicked(row: any) {
-    this.router.navigate([`/customer/${row.id}`]);
+    this.router.navigate([`/customers/${row.id}`]);
   }
 }

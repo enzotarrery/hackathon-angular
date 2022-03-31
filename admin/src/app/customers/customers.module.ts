@@ -9,10 +9,12 @@ import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { CustomersService } from '../services/customers.service';
+import { CustomersProfileComponent } from './customers-profile/customers-profile.component';
 
 @NgModule({
   declarations: [
     CustomersListComponent,
+    CustomersProfileComponent,
   ],
   imports: [
     CommonModule,
