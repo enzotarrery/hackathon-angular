@@ -11,6 +11,7 @@ import { TripListComponent } from './trip-list/trip-list.component';
 import { TripFormComponent } from './trip-form/trip-form.component';
 import { TripViewComponent } from './trip-view/trip-view.component';
 import { TripService } from '../services/trip/trip.service';
+import { BoatService } from '../services/Boat/boat.service';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { TripService } from '../services/trip/trip.service';
   ],
   providers: [
     TripService,
+    BoatService,
    ],
 })
 export class TripModule { }
