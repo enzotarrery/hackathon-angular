@@ -9,7 +9,11 @@ import { BoatService } from '../services/Boat/boat.service';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
+// forms
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatTableModule,
     MatPaginatorModule,
     HttpClientModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [BoatService]
 })
