@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stuff_types",
+  "info": {
+    "singularName": "stuff-type",
+    "pluralName": "stuff-types",
+    "displayName": "stuff_type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "stuffs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::stuff.stuff",
+      "mappedBy": "stuff_type"
+    }
+  }
+}
