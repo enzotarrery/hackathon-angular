@@ -5,12 +5,11 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class TripService {
+export class StuffTypeService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getTrips() {
-    return this.httpClient.get('http://localhost:1337/api/trips')
+  searchStuff(param: string): Observable<any> {
+    return this.httpClient.get('http://localhost:1337/api/stuff-types?filters[name][$contains]=' + param);
   }
-
 }

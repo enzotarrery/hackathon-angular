@@ -3,7 +3,34 @@
 }
 
 .dashboard-content{
+    padding: 40px 35px;
     flex: 1 1 80%;
     min-height: 100vh;
     background-color: #FAFBFF;
+
+    &__title{
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    &__heading{
+        background-color: #fff;
+        border-radius: 5px;
+        display: flex;
+    }
+
+    &__stats{
+        border-right: solid 1px #ccc;
+    }
+
+    &__stat-name{
+        color: #acacac;
+        font-size: 14px;
+    }
+
+    &__stat-num{
+        font-size: 32px;
+        font-weight: 500;
+        color: #ccc;
+    }
 }
