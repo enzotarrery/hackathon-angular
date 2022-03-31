@@ -16,14 +16,14 @@ export class DashboardComponent implements OnInit {
   constructor(private tripService: TripService, private stuffTypeService: StuffTypeService) { }
 
   ngOnInit(): void {
-    this.getTrips();
+    //this.getTrips();
   }
 
   getTrips() {
     this.trips = this.tripService.getTrips()
   }
 
-  search() {
+  searchStuff() {
     this.trips = this.stuffTypeService.searchStuff(this.searchword)
   }
 }

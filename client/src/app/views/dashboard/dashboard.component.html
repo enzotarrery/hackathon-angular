@@ -8,21 +8,21 @@
                     <img src="assets/img/dashboard-boat.png" alt="">
                     <div class="dashboard-content__stats">
                         <p class="dashboard-content__stat-name">Trajets effectués</p>
-                        <p class="dashboard-content__stat-num">trips length</p>
+                        <p class="dashboard-content__stat-num">7</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
                     <img src="assets/img/dashboard-date.png" alt="">
                     <div class="dashboard-content__stats">
                         <p class="dashboard-content__stat-name">Prochain Trajet</p>
-                        <p class="dashboard-content__stat-num">next trip date</p>
+                        <p class="dashboard-content__stat-num">19/03</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
                     <img src="assets/img/dashboard-stuff.png" alt="">
                     <div class="dashboard-content__stats">
                         <p class="dashboard-content__stat-name">Total marchandise</p>
-                        <p class="dashboard-content__stat-num">Stuff count</p>
+                        <p class="dashboard-content__stat-num">56KG</p>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,8 @@
         <div class="dashboard-content__trips">
             <div class="dashboard-content__trips-heading">
                 <h2>La liste de mes trajets</h2>
-                <input type="text" [(ngModel)]="searchword" (ngModelChange)="search()" placeholder="Recherche..." />
+                <button type="button" class="btn btn-danger">Voir les trajets</button>
+
             </div>
 
             <div class="dashboard-content__trips-list">
