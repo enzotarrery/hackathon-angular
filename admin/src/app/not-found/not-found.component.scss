@@ -1,0 +1,35 @@
+@use '../../assets/scss/variables' as var;
+.error-404 {
+  padding: 30px;
+
+  h1 {
+    font-size: 180px;
+    font-weight: 700;
+    color: var.$primary;
+    margin-bottom: 0;
+    line-height: 150px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var.$secondary;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    background: lighten(var.$tertiary, 20);
+    color: #fff;
+    padding: 8px 30px;
+    &:hover {
+      background: lighten(var.$tertiary, 10);
+    }
+  }
+
+  @media (min-width: 992px) {
+    img {
+      max-width: 50%;
+    }
+  }
+
+}
