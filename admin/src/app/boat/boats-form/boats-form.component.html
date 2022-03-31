@@ -1,6 +1,6 @@
 <app-breadcrumb [title]="titleBreadcrumb"></app-breadcrumb>
 
-<form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="boatSent; else boatSentForm">
+<form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="!boatSent; else boatSentForm">
   <div class="form-row">
     <div class="col-3">
       <input
