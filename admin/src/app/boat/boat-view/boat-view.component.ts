@@ -9,6 +9,7 @@ import { BoatService } from 'src/app/services/Boat/boat.service';
   styleUrls: ['./boat-view.component.scss']
 })
 export class BoatViewComponent implements OnInit {
+  titleBreadcrumb = 'Boat view';
   boat: Boats;
   constructor(
     private boatService: BoatService,
@@ -23,8 +24,12 @@ export class BoatViewComponent implements OnInit {
   getBoatById() {
     let id = this.route.snapshot.paramMap.get('id');
     if (id !== null) {
-      this.boatService.getBoatById(id).subscribe((response) => {
-        this.boat = response as Boats;
+      this.boatService.getBoatById(id).subscribe((response: any) => {
+        const boatToShow = {
+          id: response.data.id,
+          ...response.data.attributes
+        }
+        this.boat = boatToShow as Boats;
       })
       
     }

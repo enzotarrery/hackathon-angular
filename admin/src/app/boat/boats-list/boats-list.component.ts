@@ -59,7 +59,7 @@ export class BoatsListComponent implements AfterViewInit {
     console.log($event, 'event')
   }
   onRowClicked(row: any) {
-    this.router.navigate([`/boats/${row.id}`]);
+    this.router.navigate([`/boat/${row.id}`]);
   }
 
 }
