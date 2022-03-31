@@ -1,29 +1,28 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Boats } from 'src/app/Model/Boats';
+import { Trips } from 'src/app/Model/trips';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BoatService {
-  readonly url = '/api/boats';
+export class TripService {
+  readonly url = '/api/trips';
   apiKey: string | undefined;
 
   constructor(private httpClient: HttpClient) { 
     this.apiKey = environment.apiKey;
   }
 
-  getBoats(): Observable<any> {
+  getTrips(): Observable<any> {
     const opts = {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.apiKey}`,
     };
     return this.httpClient.get(`${this.url}`, { headers: opts });
   }
-  
-  addBoat(boat: Boats): Observable<any> {
+  addTrip(trip: Trips): Observable<any> {
     const opts = {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.apiKey}`,
@@ -31,18 +30,17 @@ export class BoatService {
     };
     return this.httpClient.post(`${this.url}`, 
     {
-      data: boat
+      data: trip
     }, 
     { headers: opts,
       withCredentials: true
     });
   }
-  getBoatById(id: string) {
+  getTripById(id: string) {
     const opts = {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.apiKey}`,
     };
     return this.httpClient.get(`${this.url}/${id}`, { headers: opts })
   }
-
 }
