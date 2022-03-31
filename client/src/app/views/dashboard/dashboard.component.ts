@@ -14,7 +14,6 @@ export class DashboardComponent implements OnInit {
   trips$: Trip[] = []
   stuffs$: Observable<Stuff[]> = new Observable
   tripPercentage: number = 0
-  tripNumber: number = 0
   searchword: string = ''
 
   constructor(private tripService: TripService, private stuffTypeService: StuffTypeService) { }
@@ -38,9 +37,9 @@ export class DashboardComponent implements OnInit {
         }
         return trip;
       })
-      this.tripNumber = this.trips$.length
-      this.tripPercentage = (this.trips$.filter(trip => trip.state == 'arrived').length / this.tripNumber)* 100
-
+      this.tripPercentage = (this.trips$.filter(trip => trip.state == 'arrived').length / this.trips$.length)* 100
+      console.log(this.trips$);
+      
     });
   }
 

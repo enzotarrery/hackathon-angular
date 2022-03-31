@@ -8,5 +8,6 @@ export interface Trip {
     departure: string,
     state: string,
     boat: Boat,
+    price?: number,
     stuff?: Stuff
 }

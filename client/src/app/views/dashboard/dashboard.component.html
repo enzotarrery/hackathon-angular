@@ -3,36 +3,7 @@
     <div class="dashboard-content">
         <h1 class="dashboard-content__title"> Bonjour, </h1>
         <div class="dashboard-content__heading">
-            <div class="row">
-                <div class="col-12 col-md-3 d-flex">
-                    <img class="d-block m-auto" src="assets/img/dashboard-boat.png" alt="">
-                    <div class="dashboard-content__stats">
-                        <p class="dashboard-content__stat-name">Trajets effectués</p>
-                        <p class="dashboard-content__stat-num">{{tripNumber}}</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 d-flex">
-                    <img class="d-block m-auto" src="assets/img/dashboard-date.png" alt="">
-                    <div class="dashboard-content__stats">
-                        <p class="dashboard-content__stat-name">Prochain Trajet</p>
-                        <p class="dashboard-content__stat-num">19/03</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 d-flex">
-                    <img class="d-block m-auto" src="assets/img/dashboard-stuff.png" alt="">
-                    <div class="dashboard-content__stats">
-                        <p class="dashboard-content__stat-name">Total marchandise</p>
-                        <p class="dashboard-content__stat-num">56KG</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-3 d-flex">
-                    <img class="d-block m-auto" src="assets/img/dashboard-eco.png" alt="">
-                    <div class="dashboard-content__stats">
-                        <p class="dashboard-content__stat-name">Co2 Economisé</p>
-                        <p class="dashboard-content__stat-num">2 Tonnes</p>
-                    </div>
-                </div>
-            </div>
+            <app-head [trips]="trips$"></app-head>
         </div>
         <div class="dashboard-content__trips">
             <div class="dashboard-content__trips-heading">
@@ -53,10 +24,10 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let trip of trips$">
-                            <th>{{trip.departure}}</th>
-                            <td>{{trip.departure}}</td>
-                            <td>{{trip.departure}}</td>
-                            <td>{{trip.departure}}</td>
+                            <th>{{trip.stuff?.label}}</th>
+                            <td>{{trip.boat.name}}</td>
+                            <td>{{trip.price}}</td>
+                            <td>{{trip.stuff?.weight}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -85,8 +56,8 @@
                             <tbody>
                                 <tr *ngFor="let trip of trips$">
                                     <td>{{trip.stuff?.label}}</td>
-                                    <td>{{trip.endDate}}</td>
-                                    <td>{{trip.startDate}}</td>
+                                    <td>{{trip.price}}</td>
+                                    <td>{{trip.stuff?.weight}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -103,7 +74,8 @@
                     </h3>
 
                     <p class="dashboard-content__percentage-text">
-                        {{tripPercentage}}% De vos trajets sont terminés
+                        <span class="dashboard-content__percentage-number">{{tripPercentage | number: '1.0-0'}}%</span>
+                        De vos trajets sont terminés
                     </p>
                 </div>
             </div>
