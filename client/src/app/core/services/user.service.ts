@@ -40,4 +40,8 @@ export class UserService {
 
     return null;
   }
+
+  add(user: User): Observable<any> {
+    return this.httpClient.post(STRAPI_API + 'auth/local/register', user);
+  }
 }
