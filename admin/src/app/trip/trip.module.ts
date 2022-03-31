@@ -7,10 +7,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { TripRoutingModule } from './trip-routing.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TripListComponent } from './trip-list/trip-list.component';
+import { TripFormComponent } from './trip-form/trip-form.component';
+import { TripViewComponent } from './trip-view/trip-view.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    TripListComponent,
+    TripFormComponent,
+    TripViewComponent
+  ],
   imports: [
     CommonModule,
     TripRoutingModule,
