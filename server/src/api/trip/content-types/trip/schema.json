@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trips",
+  "info": {
+    "singularName": "trip",
+    "pluralName": "trips",
+    "displayName": "Trip",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "startDate": {
+      "type": "datetime"
+    },
+    "endDate": {
+      "type": "datetime"
+    },
+    "boats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::boat.boat",
+      "mappedBy": "trip"
+    },
+    "destination": {
+      "type": "string"
+    },
+    "departure": {
+      "type": "string"
+    },
+    "checkpoints": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::checkpoint.checkpoint",
+      "mappedBy": "trip"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "departure",
+        "traveling",
+        "arrived"
+      ]
+    }
+  }
+}

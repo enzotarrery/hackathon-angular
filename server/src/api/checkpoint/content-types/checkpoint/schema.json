@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "checkpoints",
+  "info": {
+    "singularName": "checkpoint",
+    "pluralName": "checkpoints",
+    "displayName": "Checkpoint"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "trip": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::trip.trip",
+      "inversedBy": "checkpoints"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::location.location",
+      "inversedBy": "checkpoint"
+    }
+  }
+}

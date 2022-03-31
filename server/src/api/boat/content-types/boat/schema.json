@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "boats",
+  "info": {
+    "singularName": "boat",
+    "pluralName": "boats",
+    "displayName": "Boat"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "length": {
+      "type": "decimal"
+    },
+    "width": {
+      "type": "decimal"
+    },
+    "depth": {
+      "type": "decimal"
+    },
+    "height": {
+      "type": "decimal"
+    },
+    "maxWeigth": {
+      "type": "decimal"
+    },
+    "maxVolume": {
+      "type": "decimal"
+    },
+    "trip": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::trip.trip",
+      "inversedBy": "boats"
+    }
+  }
+}

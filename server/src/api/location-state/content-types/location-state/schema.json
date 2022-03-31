@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "stuff_types",
+  "collectionName": "location_states",
   "info": {
-    "singularName": "stuff-type",
-    "pluralName": "stuff-types",
-    "displayName": "StuffType",
-    "description": ""
+    "singularName": "location-state",
+    "pluralName": "location-states",
+    "displayName": "LocationState"
   },
   "options": {
     "draftAndPublish": true
@@ -15,11 +14,11 @@
     "name": {
       "type": "string"
     },
-    "stuffs": {
+    "locations": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::stuff.stuff",
-      "mappedBy": "stuff_type"
+      "target": "api::location.location",
+      "mappedBy": "location_state"
     }
   }
 }

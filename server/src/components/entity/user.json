@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_entity_users",
+  "info": {
+    "displayName": "User",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    },
+    "email": {
+      "type": "email"
+    },
+    "blocked": {
+      "type": "boolean"
+    },
+    "resetPasswordToken": {
+      "type": "string"
+    },
+    "confirmationToken": {
+      "type": "string"
+    },
+    "confirmed": {
+      "type": "boolean"
+    },
+    "username": {
+      "type": "string"
+    }
+  }
+}
