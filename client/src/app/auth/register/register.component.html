@@ -1,1 +1,45 @@
-<p>register works!</p>
+<form [formGroup]="form" (ngSubmit)="this.addUser()">
+  <label for="firstname">Prénom</label>
+  <input
+    type="text"
+    formControlName="firstname"
+    name="firstname"
+    id="firstname"
+  />
+  <label for="lastname">Nom</label>
+  <input type="text" formControlName="lastname" name="lastname" id="lastname" />
+  <label for="username">Pseudonyme</label>
+  <input type="text" formControlName="username" name="username" id="username" />
+  <label for="email">Email</label>
+  <input formControlName="email" name="email" id="email" />
+  <label for="password">Mot de passe</label>
+  <input
+    type="password"
+    formControlName="password"
+    name="password"
+    id="password"
+  />
+  <input
+    type="checkbox"
+    formControlName="confirmed"
+    name="confirmed"
+    id="confirmed"
+    class="hidden"
+  />
+  <input
+    type="checkbox"
+    formControlName="blocked"
+    name="blocked"
+    id="blocked"
+    class="hidden"
+  />
+  <button color="primary" type="submit">Créer un utilisateur</button>
+  <p *ngIf="form.dirty || form.touched">
+    <span *ngIf="form.get('firstname')?.hasError('required')">
+      Le prénom est obligatoire.
+    </span>
+    <span *ngIf="form.get('firstname')?.hasError('minlength')">
+      Le prénom doit comporter plus de 2 caractères.
+    </span>
+  </p>
+</form>

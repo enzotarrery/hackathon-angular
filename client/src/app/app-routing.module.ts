@@ -3,8 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { GuardGuard } from './auth/guard.guard';
 import { LoginComponent } from './auth/login/login.component';
 import { LogoutComponent } from './auth/logout/logout.component';
+import { RegisterComponent } from './auth/register/register.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { HomeComponent } from './views/home/home.component';
+import { TripsComponent } from './views/trips/trips.component';
 
 const routes: Routes = [
   {
@@ -14,7 +16,16 @@ const routes: Routes = [
   {
     path: 'dashboard',
     canActivate: [GuardGuard],
-    component: DashboardComponent,
+    children: [
+      {
+        path: '',
+        component: DashboardComponent,
+      },
+      {
+        path: 'trips',
+        component: TripsComponent,
+      },
+    ],
   },
   {
     path: 'login',
@@ -23,6 +34,10 @@ const routes: Routes = [
   {
     path: 'logout',
     component: LogoutComponent,
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
   },
 ];
 
