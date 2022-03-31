@@ -12,17 +12,15 @@ import { MatTableDataSource } from '@angular/material/table';
 export class CustomersListComponent implements AfterViewInit {
   titleBreadcrumb = 'Customers List';
   @ViewChild('paginator') paginator: MatPaginator;
+
+  // forms
   dataSource: MatTableDataSource<Customers>;
   displayedColumns: string[] = [
-    // 'createdAt',
+    'username',
     'firstname',
-    // 'gender',
-    // 'id',
-    // 'isBlocked',
     'lastname',
     'email',
-    // 'newsletter',
-    // 'updatedAt',
+    'actions',
   ];
   customers: Customers[];
   pageSizeOptions: number[] = [10, 25, 50];
@@ -32,14 +30,14 @@ export class CustomersListComponent implements AfterViewInit {
   // MatPaginator Output
   pageEvent: PageEvent;
 
-  constructor(private customerService: CustomersService) { }
+  constructor(private customerService: CustomersService) {}
   ngAfterViewInit() {
     this.getCustomers();
   }
 
   getCustomers() {
     this.customerService.getCustomers().subscribe(response => {
-      this.dataSource = new MatTableDataSource(response['hydra:member']);
+      this.dataSource = new MatTableDataSource(response);
       this.dataSource.paginator = this.paginator;
     });
   }
