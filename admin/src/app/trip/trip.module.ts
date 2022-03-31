@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TripListComponent } from './trip-list/trip-list.component';
 import { TripFormComponent } from './trip-form/trip-form.component';
 import { TripViewComponent } from './trip-view/trip-view.component';
+import { TripService } from '../services/trip/trip.service';
 
 
 @NgModule({
@@ -28,6 +29,9 @@ import { TripViewComponent } from './trip-view/trip-view.component';
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule
-  ]
+  ],
+  providers: [
+    TripService,
+   ],
 })
 export class TripModule { }

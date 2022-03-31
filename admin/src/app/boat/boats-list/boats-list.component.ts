@@ -39,7 +39,6 @@ export class BoatsListComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.getBoats();
-    console.log('init')
   }
 
   getBoats() {

@@ -20,7 +20,7 @@ export class TripService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.apiKey}`,
     };
-    return this.httpClient.get(`${this.url}`, { headers: opts });
+    return this.httpClient.get(`${this.url}?populate=%2A`, { headers: opts });
   }
   addTrip(trip: Trips): Observable<any> {
     const opts = {
