@@ -4,6 +4,7 @@ import { Customers } from 'src/app/Model/Customers';
 import {PageEvent} from '@angular/material/paginator';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-customers-list',
   templateUrl: './customers-list.component.html',
@@ -25,12 +26,15 @@ export class CustomersListComponent implements AfterViewInit {
   customers: Customers[];
   pageSizeOptions: number[] = [10, 25, 50];
   pageSize = 10;
-  customerLength = 0;
 
   // MatPaginator Output
   pageEvent: PageEvent;
 
-  constructor(private customerService: CustomersService) {}
+  constructor(
+    private customerService: CustomersService,
+    private router: Router
+  ) {}
+
   ngAfterViewInit() {
     this.getCustomers();
   }
@@ -42,11 +46,9 @@ export class CustomersListComponent implements AfterViewInit {
     });
   }
   setPage($event: PageEvent) {
-    console.log($event)
-    console.log(this.dataSource.paginator)
+    console.log($event, 'event')
   }
   onRowClicked(row: any) {
-    console.log('Row clicked: ', row);
-  } 
-
+    this.router.navigate([`/customer/${row.id}`]);
+  }
 }
