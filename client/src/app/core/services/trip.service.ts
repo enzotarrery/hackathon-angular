@@ -21,7 +21,7 @@ export class TripService {
   getTrips(): Observable<any> {
     const opts = {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer eb6bc3bfea7804faa5640c491ebbdc6c43fe2d6647aeac94f37315a27162fd547097243b4064fd1546cfeae8cb67a2ad19492a18341368cb0a3056021e33ffaede290c6d5e9f4c8e0ddfcb54e6e78dc742d3275e7dea5dc6ce8d9970b732a41bddce94eb5d2877fe52571f681cdff634bdcb32a1542f30b52112734a84df42a5`,
+      'Authorization': `Bearer f71cac6382eef5e42dccb5319d24ba1fff97e8bd447556dcff1bf25d55e634675231238fd617d1bf77b85a782352d89f37af596d45758f2c6d6c62f861dd614c6598ef51a1faac7826dd9c8c3c5593efbef2d5fd96154570279cfc5a24740b908b1b2c69fad0547b2eac85ea37ef65e987392780b94c76c12bfded0cbb8fcc8a`,
     };
     return this.httpClient.get(`http://localhost:1337/api/trips?populate=%2A`, { headers: opts });
   }

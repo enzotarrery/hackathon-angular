@@ -24,6 +24,11 @@ import { HeadComponent } from './shared/dashboard/head/head.component';
 import { TripsComponent } from './views/trips/trips.component';
 import { PaiementsComponent } from './views/paiements/paiements.component';
 
+
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +53,9 @@ import { PaiementsComponent } from './views/paiements/paiements.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    NoopAnimationsModule
   ],
   providers: [BoatService, TripService, UserService, TokenStorageService],
   bootstrap: [AppComponent],
