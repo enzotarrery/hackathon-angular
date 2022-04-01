@@ -7,38 +7,8 @@
 
     <section class="d-flex flex-column gap-5 p-5 rounded-3">
       <header class="d-flex flex-row justify-content-between">
-        <h3 class="fs-2 fw-bold align-self-lg-start">Rechercher un trajet</h3>
-        <section class="d-flex flex-row gap-3">
-          <input class="fs-6 form-control flex-auto" type="text" name="search" id="search" placeholder="Rechercher" />
-          <button class="btn btn-danger w-50">Voir les trajets</button>
-        </section>
+        <h3 class="fs-2 fw-bold align-self-lg-start">Les trajets</h3>
       </header>
-      <!-- <table class="table">
-        <thead>
-          <tr>
-            <th scope="col" class="fs-6 text-secondary">Trajet</th>
-            <th scope="col" class="fs-6 text-secondary">
-              Date de départ / date d'arrivée
-            </th>
-            <th scope="col" class="fs-6 text-secondary">Poids disponible</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <section class="d-flex flex-column justify-content-between h-100">
-                <header>
-                  <h4 class="fs-5">Trajet 1 - Nom bateau</h4>
-                </header>
-
-                <p class="fs-6 text-secondary">La Rochelle - Irlande</p>
-              </section>
-            </td>
-            <td class="fs-5 align-middle">04 avril 2022 - 10 avril 2022</td>
-            <td class="fs-5 align-middle">100 kg</td>
-          </tr>
-        </tbody>
-      </table> -->
       <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource" >
       
@@ -90,7 +60,7 @@
             <th mat-header-cell *matHeaderCellDef> Etat </th>
             <td mat-cell *matCellDef="let element"> {{element.state}} </td>
           </ng-container>
-          
+
           <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef> Actions </th>
             <td mat-cell *matCellDef="let element">
