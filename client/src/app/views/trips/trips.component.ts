@@ -64,6 +64,6 @@ export class TripsComponent implements AfterViewInit {
     console.log($event, 'event')
   }
   onRowClicked(row: any) {
-    this.router.navigate([`/${row.id}`]);
+    this.router.navigate([`dashboard/trips/${row.id}`]);
   }
 }
