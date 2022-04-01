@@ -28,9 +28,18 @@ export class TripService {
       'Authorization': `Bearer ${this.apiKey}`,
       'Access-Control-Allow-Origin':'*',
     };
+    console.log({
+      data: {
+        checkpoints: [],
+        ...trip,
+      }
+    })
     return this.httpClient.post(`${this.url}`, 
     {
-      data: trip
+      data: {
+        checkpoints: [],
+        ...trip,
+      }
     }, 
     { headers: opts,
       withCredentials: true

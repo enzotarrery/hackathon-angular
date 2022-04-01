@@ -37,7 +37,6 @@ export class TripFormComponent implements OnInit {
         }
       })
       this.boats = updatedboat;
-      console.log(this.boats)
     });
   }
   private bindForm() {
@@ -47,7 +46,7 @@ export class TripFormComponent implements OnInit {
       departure: ['', [Validators.required]],
       destination: ['', [Validators.required]],
       state: [''],
-      boat: [''],
+      boats: [''],
     });
   }
 
