@@ -1,15 +1,25 @@
 <div class="dashboard-page">
   <app-navbar></app-navbar>
-  <div class="dashboard-content trips d-flex flex-column justify-content-between h-100">
-    <div class="d-flex flex-row justify-content-between align-items-center p-5 rounded-3 w-100">
-      <app-head></app-head>
+  <div
+    class="dashboard-content trips d-flex flex-column justify-content-between h-100"
+  >
+    <div
+      class="d-flex flex-row justify-content-between align-items-center p-5 rounded-3 w-100"
+    >
+      <app-head class="w-100"></app-head>
     </div>
 
     <section class="d-flex flex-column gap-5 p-5 rounded-3">
       <header class="d-flex flex-row justify-content-between">
         <h3 class="fs-2 fw-bold align-self-lg-start">Rechercher un trajet</h3>
         <section class="d-flex flex-row gap-3">
-          <input class="fs-6 form-control flex-auto" type="text" name="search" id="search" placeholder="Rechercher" />
+          <input
+            class="fs-6 form-control flex-auto"
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Rechercher"
+          />
           <button class="btn btn-danger w-50">Voir les trajets</button>
         </section>
       </header>
