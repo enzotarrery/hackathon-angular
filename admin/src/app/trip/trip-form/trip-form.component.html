@@ -1,0 +1,68 @@
+<app-breadcrumb [title]="titleBreadcrumb"></app-breadcrumb>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="!tripSent; else tripSentForm">
+  <div class="form-row">
+    <div class="col-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Departure"
+        formControlName="departure"
+        >
+    </div>
+    <div class="col-3 mt-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Destination"
+        formControlName="destination"
+        >
+    </div>
+    <div class="col-3 mt-3">
+      <input
+        type="datetime-local"
+        class="form-control"
+        placeholder="Start Date"
+        formControlName="startDate"
+        >
+    </div>
+    <div class="col-3 mt-3">
+      <input
+        type="datetime-local"
+        class="form-control"
+        placeholder="End Date"
+        formControlName="endDate"
+        >
+    </div>
+    <div class="col-3 mt-3">
+      <select formControlName="state" name="state" class="form-select" aria-label="Default select state">
+        <option value="departure" selected>Departure</option>
+        <option value="traveling">Traveling</option>
+        <option value="arrived">Arrived</option>
+      </select>
+    </div>
+    <div class="col-3 mt-3">
+      <h3>Boat choice</h3>
+      <select formControlName="boats" class="form-select" aria-label="Default select state">
+        <option
+          *ngFor="let boat of boats" 
+          [value]="boat.id"
+        >
+        {{ boat.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary mt-4">Send</button>
+</form>
+<ng-template #tripSentForm>
+  <div class="alert alert-success" role="alert">
+    Success !!!
+  </div>
+  <div>
+    <a routerLink="/boat">
+      <i class="bi bi-eye-fill" style="font-size: 1.5rem;"></i>
+      <span class="m-2">SEE THE TRIP LIST</span>
+    </a>
+  </div>
+</ng-template>

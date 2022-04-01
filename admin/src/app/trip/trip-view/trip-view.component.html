@@ -1,0 +1,39 @@
+<app-breadcrumb [title]="titleBreadcrumb"></app-breadcrumb>
+<div class="col-md-14 aside">
+  <h1 class="mb-3">Trip Details</h1>
+  <div class="row vert-margin">
+    <div class="col-sm-9">
+      <div class="card">
+        <div class="card-body" *ngIf="trip">
+          <h3>Info</h3>
+          <p>
+            <b>Departure:</b> {{ this.trip.departure }}<br>
+            <b>Destination:</b> {{ this.trip.destination }}<br>
+            <b>Start Date:</b> {{ this.trip.startDate | date: 'short' }}<br>
+            <b>End Date:</b> {{ this.trip.endDate | date: 'short'}}<br>
+            <b>State</b> {{ this.trip.state }}<br>
+
+          </p>
+          <ng-container *ngIf="trip.boat">
+            <h3>Boat Info</h3>
+            <p>
+              <b>Name:</b> {{ this.trip.boat.name }}<br>
+              <b>Length:</b> {{ this.trip.boat.length }}<br>
+              <b>Width:</b> {{ this.trip.boat.width }}<br>
+              <b>Depth:</b> {{ this.trip.boat.depth }}<br>
+              <b>Height:</b> {{ this.trip.boat.height }}<br>
+              <b>maxWeigth:</b> {{ this.trip.boat.maxWeigth }}<br>
+              <b>maxVolume:</b> {{ this.trip.boat.maxVolume }}<br>
+            </p>
+          </ng-container>
+          <div class="mt-2">
+            <a routerLink="/">
+              <i class="bi bi-pencil"></i>
+              <span class="mx-4">Edit</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
