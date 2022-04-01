@@ -14,6 +14,16 @@ const routes: Routes = [
       .then( m => m.CustomersModule)
   },
   {
+    path: 'boat', 
+    loadChildren: () => import('./boat/boat.module')
+      .then( m => m.BoatModule)
+  },
+  {
+    path: 'trips', 
+    loadChildren: () => import('./trip/trip.module')
+      .then( m => m.TripModule)
+  },
+  {
     path: '**',
     component: NotFoundComponent
   },

@@ -1,31 +1,48 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
+import { Boats } from 'src/app/Model/Boats';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CustomersService {
-  readonly url = 'http://localhost:1337/api/users';
+export class BoatService {
+  readonly url = '/api/boats';
   apiKey: string | undefined;
 
   constructor(private httpClient: HttpClient) { 
     this.apiKey = environment.apiKey;
   }
 
-  getCustomers(): Observable<any> {
+  getBoats(): Observable<any> {
     const opts = {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.apiKey}`,
     };
     return this.httpClient.get(`${this.url}`, { headers: opts });
   }
-  getCustomerById(id: string) {
+  
+  addBoat(boat: Boats): Observable<any> {
+    const opts = {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.apiKey}`,
+      'Access-Control-Allow-Origin':'*',
+    };
+    return this.httpClient.post(`${this.url}`, 
+    {
+      data: boat
+    }, 
+    { headers: opts,
+      withCredentials: true
+    });
+  }
+  getBoatById(id: string) {
     const opts = {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${this.apiKey}`,
     };
     return this.httpClient.get(`${this.url}/${id}`, { headers: opts })
   }
+
 }

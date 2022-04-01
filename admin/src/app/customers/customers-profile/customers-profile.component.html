@@ -1,0 +1,25 @@
+<app-breadcrumb [title]="titleBreadcrumb"></app-breadcrumb>
+<div class="col-md-14 aside">
+  <h1 class="mb-3">Account Details</h1>
+  <div class="row vert-margin">
+    <div class="col-sm-9">
+      <div class="card">
+        <div class="card-body">
+          <h3>Personal Info</h3>
+          <p>
+            <b>UserName:</b> {{ this.customer.username }}<br>
+            <b>First Name:</b> {{ this.customer.firstname }}<br>
+            <b>Last Name:</b> {{ this.customer.lastname }}<br>
+            <b>E-mail:</b> {{ this.customer.email }}<br>
+          </p>
+          <div class="mt-2">
+            <a routerLink="edit">
+              <i class="bi bi-pencil"></i>
+              <span class="mx-4">Edit</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

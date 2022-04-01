@@ -1,0 +1,28 @@
+<app-breadcrumb [title]="titleBreadcrumb"></app-breadcrumb>
+<div class="col-md-14 aside">
+  <h1 class="mb-3">Boat Details</h1>
+  <div class="row vert-margin">
+    <div class="col-sm-9">
+      <div class="card">
+        <div class="card-body">
+          <h3>Personal Info</h3>
+          <p>
+            <b>Name:</b> {{ this.boat.name }}<br>
+            <b>Length:</b> {{ this.boat.length }}<br>
+            <b>Width:</b> {{ this.boat.width }}<br>
+            <b>Depth:</b> {{ this.boat.depth }}<br>
+            <b>Height:</b> {{ this.boat.height }}<br>
+            <b>maxWeigth:</b> {{ this.boat.maxWeigth }}<br>
+            <b>maxVolume:</b> {{ this.boat.maxVolume }}<br>
+          </p>
+          <div class="mt-2">
+            <a routerLink="/">
+              <i class="bi bi-pencil"></i>
+              <span class="mx-4">Edit</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
