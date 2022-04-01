@@ -11,7 +11,7 @@ import { TripService } from 'src/app/core/services/trip.service';
 })
 
 export class TripComponent implements OnInit {
-
+  price: number;
   trip!: Trip;
   zoom = 6
   center: google.maps.LatLngLiteral
@@ -49,6 +49,7 @@ export class TripComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
+    
     this.getData();
     navigator.geolocation.getCurrentPosition((position) => {
       this.center = {
@@ -73,16 +74,15 @@ export class TripComponent implements OnInit {
         id: response.data.id,
         ...response.data.attributes,
       }
-      const boatData = response.data.attributes.boats.data;
+      const boatData = response.data.attributes.boats?.data;
 
-      if (boatData.length > 0) {
+      if (boatData && boatData.length > 0) {
         tripToShow.boat = {
           id: boatData[0].id,
           ...boatData[0].attributes
         }
       }
       this.trip = tripToShow as Trip;
-      console.log(this.trip)
     });
 
     this.checkpointService
@@ -152,6 +152,11 @@ export class TripComponent implements OnInit {
       strokeWeight: 2,
     }
     
+  }
+  setPrice(event: Event) {
+    const newPlace = parseInt((event.target as HTMLInputElement).value, 10);
+
+    this.price = newPlace / 3;
   }
 }
 
