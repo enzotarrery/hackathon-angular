@@ -7,6 +7,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { HomeComponent } from './views/home/home.component';
 import { TripComponent } from './views/trip/trip.component';
+import { MytripsComponent } from './views/mytrips/mytrips.component';
 import { PaiementsComponent } from './views/paiements/paiements.component';
 import { TripsComponent } from './views/trips/trips.component';
 
@@ -36,6 +37,10 @@ const routes: Routes = [
           }
         ]
 
+      },
+      {
+        path: 'mytrips',
+        component: MytripsComponent,
       },
       {
         path: 'paiement',
