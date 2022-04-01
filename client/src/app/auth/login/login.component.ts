@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       this.tokenStorageService.setToken(response.jwt);
       this.userService.setUser(user);
 
-      this.router.navigate(['/']);
+      this.router.navigate(['/dashboard']);
     });
   }
 }

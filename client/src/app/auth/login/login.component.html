@@ -1,26 +1,57 @@
-<form [formGroup]="form" (ngSubmit)="login()">
-  <label for="username">Nom d'utilisateur</label>
-  <input type="text" formControlName="username" name="username" id="username" />
 
-  <label for="password">Mot de passe</label>
-  <input
-    type="password"
-    formControlName="password"
-    name="password"
-    id="password"
-  />
-
-  <button color="primary" type="submit">Connexion</button>
-
-  <p *ngIf="form.dirty || form.touched">
-    <span *ngIf="form.get('username')?.hasError('required')">
-      Le nom d'utilisateur est obligatoire.
-    </span>
-    <span *ngIf="form.get('password')?.hasError('required')">
-      Le mot de passe est obligatoire.
-    </span>
-    <span *ngIf="form.get('password')?.hasError('minlength')">
-      Le mot de passe doit comporter au moins 6 caractères.
-    </span>
-  </p>
-</form>
+<app-header></app-header>
+<main  class="h-100 d-flex justify-content-center align-content-center bg-light py-5">
+  <form class="w-50 m-auto" [formGroup]="form" (ngSubmit)="login()">
+    <!-- username input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="username">Username</label>
+      <input type="text" class="form-control" formControlName="username" name="username" id="username" />
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="password">Password</label>
+      <input  type="password"
+              formControlName="password"
+              name="password"
+              id="password"
+              class="form-control" />
+    </div>
+  
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+        <!-- Checkbox -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+          <label class="form-check-label" for="form2Example31"> Remember me </label>
+        </div>
+      </div>
+  
+      <div class="col">
+        <!-- Simple link -->
+        <a href="#!">Forgot password?</a>
+      </div>
+    </div>
+  
+    <!-- Submit button -->
+    <button class="btn btn-primary btn-block mb-4" type="submit">Connexion</button>
+    <!-- Register buttons -->
+    <div class="text-center">
+      <p>Not a member? <a routerLink="/register">Register</a></p>
+    </div>
+  
+    <p *ngIf="form.dirty || form.touched">
+      <span *ngIf="form.get('username')?.hasError('required')">
+        Le nom d'utilisateur est obligatoire.
+      </span>
+      <span *ngIf="form.get('password')?.hasError('required')">
+        Le mot de passe est obligatoire.
+      </span>
+      <span *ngIf="form.get('password')?.hasError('minlength')">
+        Le mot de passe doit comporter au moins 6 caractères.
+      </span>
+    </p>
+  </form>
+</main>
+<app-footer></app-footer>
