@@ -25,7 +25,7 @@
                     <tbody>
                         <tr *ngFor="let trip of trips$">
                             <th>{{trip.stuff?.label}}</th>
-                            <td>{{trip.boat.name}}</td>
+                            <td>{{trip.boat?.name}}</td>
                             <td>{{trip.stuff?.volume}}€</td>
                             <td>{{trip.stuff?.weight}}</td>
                         </tr>

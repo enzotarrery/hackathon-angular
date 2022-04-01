@@ -4,11 +4,13 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GoogleMapsModule } from '@angular/google-maps'
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { NavbarComponent } from './shared/dashboard/navbar/navbar.component';
+import { TripComponent } from './views/trip/trip.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,6 +31,7 @@ import { TripsComponent } from './views/trips/trips.component';
     HomeComponent,
     DashboardComponent,
     NavbarComponent,
+    TripComponent,
     LoginComponent,
     RegisterComponent,
     LogoutComponent,
@@ -38,6 +41,7 @@ import { TripsComponent } from './views/trips/trips.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    GoogleMapsModule,
     NgxWebstorageModule.forRoot(),
     HttpClientModule,
     FormsModule,

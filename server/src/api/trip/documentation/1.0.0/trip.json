@@ -204,6 +204,26 @@
                                                                                                   }
                                                                                                 }
                                                                                               },
+                                                                                              "checkpoints": {
+                                                                                                "type": "object",
+                                                                                                "properties": {
+                                                                                                  "data": {
+                                                                                                    "type": "array",
+                                                                                                    "items": {
+                                                                                                      "type": "object",
+                                                                                                      "properties": {
+                                                                                                        "id": {
+                                                                                                          "type": "string"
+                                                                                                        },
+                                                                                                        "attributes": {
+                                                                                                          "type": "object",
+                                                                                                          "properties": {}
+                                                                                                        }
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              },
                                                                                               "createdAt": {
                                                                                                 "type": "string",
                                                                                                 "format": "date-time"
@@ -571,6 +591,23 @@
                                                                                     }
                                                                                   }
                                                                                 }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      },
+                                                                      "state": {
+                                                                        "type": "object",
+                                                                        "properties": {
+                                                                          "data": {
+                                                                            "type": "object",
+                                                                            "properties": {
+                                                                              "id": {
+                                                                                "type": "string"
+                                                                              },
+                                                                              "attributes": {
+                                                                                "type": "object",
+                                                                                "properties": {}
                                                                               }
                                                                             }
                                                                           }
@@ -1289,6 +1326,26 @@
                                                                                                 }
                                                                                               }
                                                                                             },
+                                                                                            "checkpoints": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "data": {
+                                                                                                  "type": "array",
+                                                                                                  "items": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                      "id": {
+                                                                                                        "type": "string"
+                                                                                                      },
+                                                                                                      "attributes": {
+                                                                                                        "type": "object",
+                                                                                                        "properties": {}
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            },
                                                                                             "createdAt": {
                                                                                               "type": "string",
                                                                                               "format": "date-time"
@@ -1656,6 +1713,23 @@
                                                                                   }
                                                                                 }
                                                                               }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "state": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
                                                                             }
                                                                           }
                                                                         }
@@ -2374,6 +2448,26 @@
                                                                                                 }
                                                                                               }
                                                                                             },
+                                                                                            "checkpoints": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "data": {
+                                                                                                  "type": "array",
+                                                                                                  "items": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                      "id": {
+                                                                                                        "type": "string"
+                                                                                                      },
+                                                                                                      "attributes": {
+                                                                                                        "type": "object",
+                                                                                                        "properties": {}
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            },
                                                                                             "createdAt": {
                                                                                               "type": "string",
                                                                                               "format": "date-time"
@@ -2741,6 +2835,23 @@
                                                                                   }
                                                                                 }
                                                                               }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "state": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
                                                                             }
                                                                           }
                                                                         }
@@ -3368,6 +3479,26 @@
                                                                                                 }
                                                                                               }
                                                                                             },
+                                                                                            "checkpoints": {
+                                                                                              "type": "object",
+                                                                                              "properties": {
+                                                                                                "data": {
+                                                                                                  "type": "array",
+                                                                                                  "items": {
+                                                                                                    "type": "object",
+                                                                                                    "properties": {
+                                                                                                      "id": {
+                                                                                                        "type": "string"
+                                                                                                      },
+                                                                                                      "attributes": {
+                                                                                                        "type": "object",
+                                                                                                        "properties": {}
+                                                                                                      }
+                                                                                                    }
+                                                                                                  }
+                                                                                                }
+                                                                                              }
+                                                                                            },
                                                                                             "createdAt": {
                                                                                               "type": "string",
                                                                                               "format": "date-time"
@@ -3735,6 +3866,23 @@
                                                                                   }
                                                                                 }
                                                                               }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "state": {
+                                                                      "type": "object",
+                                                                      "properties": {
+                                                                        "data": {
+                                                                          "type": "object",
+                                                                          "properties": {
+                                                                            "id": {
+                                                                              "type": "string"
+                                                                            },
+                                                                            "attributes": {
+                                                                              "type": "object",
+                                                                              "properties": {}
                                                                             }
                                                                           }
                                                                         }
