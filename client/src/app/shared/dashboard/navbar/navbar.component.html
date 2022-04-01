@@ -5,29 +5,25 @@
     <p class="dashboard-nav__mail">{{user?.email}}</p>
   </div>
   <div class="dashboard-nav__profil py-5">
-    <a class="dashboard-nav__link d-block" routerLink="/dashboard" routerLinkActive="active"><img
-        class="dashboard-nav__icon" src="assets/icons/user-square.svg" alt="">
-      Mon profil</a>
+    <a class="dashboard-nav__link d-block" routerLink="/dashboard/trips" routerLinkActive="active"><img
+        class="dashboard-nav__icon" src="assets/icons/search.svg" alt="">
+      Envoyer une marchandise</a>
   </div>
   <ul class="dashboard-nav__list">
     <li class="dashboard-nav__item">
-      <a class="dashboard-nav__link" routerLink="/dashboard/trips" routerLinkActive="active"><img
+      <a class="dashboard-nav__link" routerLink="/dashboard" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"><img class="dashboard-nav__icon" src="assets/icons/user-square.svg"
+          alt="">
+        Tableau de bord</a>
+    </li>
+    <li class=" dashboard-nav__item">
+      <a class="dashboard-nav__link" routerLink="/dashboard/mytrips" routerLinkActive="active"><img
           class="dashboard-nav__icon" src="assets/icons/directions_boat_24px.png" alt="">
-        Liste des trajets</a>
-    </li>
-    <li class="dashboard-nav__item">
-      <a class="dashboard-nav__link" routerLink="/dashboard/merch" routerLinkActive="active"><img
-          class="dashboard-nav__icon" src="assets/icons/ad-product.svg" alt="">
-        Marchandises</a>
-    </li>
-    <li class="dashboard-nav__item">
-      <a class="dashboard-nav__link" routerLink="/dashboard/maps" routerLinkActive="active"><img
-          class="dashboard-nav__icon" src="assets/icons/Heart.svg" alt="">
-        Carte des transports</a>
+        Mes trajets</a>
     </li>
     <li class="dashboard-nav__item">
       <a class="dashboard-nav__link" routerLink="/dashboard/paiement" routerLinkActive="active"><img
-          class="dashboard-nav__icon" src="assets/icons/Category.svg" alt=""> Paiement</a>
+          class="dashboard-nav__icon" src="assets/icons/Category.svg" alt="">Paiement</a>
     </li>
   </ul>
   <div class="dashboard-nav__credit">

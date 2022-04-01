@@ -1,88 +1,92 @@
 <div class="dashboard-page">
-    <app-navbar></app-navbar>
-    <div class="dashboard-content">
-        <h1 class="dashboard-content__title"> Bonjour, Username Dynamique</h1>
-        <div class="dashboard-content__heading">
-            <app-head></app-head>
-        </div>
-        <div class="dashboard-content__trips">
-            <div class="dashboard-content__trips-heading">
-                <h2 class="dashboard-content__paiement-title">La liste de mes trajets</h2>
-                <a routerLink="/dashboard/trips">
-                    <button type="button" class="btn btn-danger">Voir les trajets</button>
-                </a>
-
-            </div>
-
-            <div class="dashboard-content__trips-list">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class="p-4" scope="col">Mes Marchandises</th>
-                            <th class="p-4" scope="col">Nom du beateau</th>
-                            <th class="p-4" scope="col">Prix</th>
-                            <th class="p-4" scope="col">Poids (kg)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let trip of trips$">
-                            <th class="p-4">{{trip.stuff?.label}}</th>
-                            <td class="p-4">{{trip.boat?.name}}</td>
-                            <td class="p-4">{{trip.stuff?.volume}}€</td>
-                            <td class="p-4">{{trip.stuff?.weight}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
-
-        <div class="row">
-
-            <div class="col-12 col-md-7">
-                <div class="dashboard-content__trips dashboard-content__footer">
-                    <div class="dashboard-content__paiement-heading">
-                        <h2 class="dashboard-content__paiement-title">Mon historique des paiements</h2>
-                        <a routerLink="/dashboard/paiement">
-                            <button type=" button" class="btn btn-danger">Voir l'historique</button>
-                        </a>
-                    </div>
-                    <div class="dashboard-content__trips-list">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th class="p-4" scope="col">Mes Marchandises</th>
-                                    <th class="p-4" scope="col">Prix</th>
-                                    <th class="p-4" scope="col">Poids (kg)</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr *ngFor="let trip of trips$">
-                                    <td class="p-4">{{trip.stuff?.label}}</td>
-                                    <td class="p-4">{{trip.stuff?.volume}}€</td>
-                                    <td class="p-4">{{trip.stuff?.weight}}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="dashboard-content__trips">
-                    <h2 class="dashboard-content__percentage-title">
-                        Mes trajets effectués
-                    </h2>
-                    <h3 class="dashboard-content__percentage-subtitle">
-                        Part des Trajets Terminées
-                    </h3>
-
-                    <p class="dashboard-content__percentage-text">
-                        <span class="dashboard-content__percentage-number">{{tripPercentage | number: '1.0-0'}}%</span>
-                        De vos trajets sont terminés
-                    </p>
-                </div>
-            </div>
-        </div>
-
+  <app-navbar></app-navbar>
+  <div class="dashboard-content">
+    <h1 class="dashboard-content__title">Bonjour, {{ user?.username }}</h1>
+    <div class="dashboard-content__heading">
+      <app-head></app-head>
     </div>
+    <div class="dashboard-content__trips">
+      <div class="dashboard-content__trips-heading">
+        <h2 class="dashboard-content__paiement-title">
+          La liste de mes trajets
+        </h2>
+        <a routerLink="/dashboard/trips">
+          <button type="button" class="btn btn-danger">Voir les trajets</button>
+        </a>
+      </div>
+
+      <div class="dashboard-content__trips-list">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="p-4" scope="col">Mes Marchandises</th>
+              <th class="p-4" scope="col">Nom du bateau</th>
+              <th class="p-4" scope="col">Prix</th>
+              <th class="p-4" scope="col">Poids (kg)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let trip of trips$">
+              <th class="p-4">{{ trip.stuff?.label }}</th>
+              <td class="p-4">{{ trip.boat?.name }}</td>
+              <td class="p-4">{{ trip.stuff?.volume }}€</td>
+              <td class="p-4">{{ trip.stuff?.weight }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-7">
+        <div class="dashboard-content__trips dashboard-content__footer">
+          <div class="dashboard-content__paiement-heading">
+            <h2 class="dashboard-content__paiement-title">
+              Mon historique des paiements
+            </h2>
+            <a routerLink="/dashboard/paiement">
+              <button type=" button" class="btn btn-danger">
+                Voir l'historique
+              </button>
+            </a>
+          </div>
+          <div class="dashboard-content__trips-list">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="p-4" scope="col">Mes Marchandises</th>
+                  <th class="p-4" scope="col">Prix</th>
+                  <th class="p-4" scope="col">Poids (kg)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let trip of trips$">
+                  <td class="p-4">{{ trip.stuff?.label }}</td>
+                  <td class="p-4">{{ trip.stuff?.volume }}€</td>
+                  <td class="p-4">{{ trip.stuff?.weight }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="dashboard-content__trips">
+          <h2 class="dashboard-content__percentage-title">
+            Mes trajets effectués
+          </h2>
+          <h3 class="dashboard-content__percentage-subtitle">
+            Part des Trajets Terminées
+          </h3>
+
+          <p class="dashboard-content__percentage-text">
+            <span class="dashboard-content__percentage-number"
+              >{{ tripPercentage | number: "1.0-0" }}%</span
+            >
+            De vos trajets sont terminés
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

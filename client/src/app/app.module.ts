@@ -4,7 +4,7 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GoogleMapsModule } from '@angular/google-maps'
+import { GoogleMapsModule } from '@angular/google-maps';
 import { HeaderComponent } from './shared/layout/header/header.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
 import { HomeComponent } from './views/home/home.component';
@@ -23,6 +23,7 @@ import { LogoutComponent } from './auth/logout/logout.component';
 import { HeadComponent } from './shared/dashboard/head/head.component';
 import { TripsComponent } from './views/trips/trips.component';
 import { PaiementsComponent } from './views/paiements/paiements.component';
+import { MytripsComponent } from './views/mytrips/mytrips.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { PaiementsComponent } from './views/paiements/paiements.component';
     HeadComponent,
     TripsComponent,
     PaiementsComponent,
+    MytripsComponent,
   ],
   imports: [
     BrowserModule,
