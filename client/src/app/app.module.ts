@@ -22,6 +22,7 @@ import { TokenStorageService } from './core/services/token-storage.service';
 import { LogoutComponent } from './auth/logout/logout.component';
 import { HeadComponent } from './shared/dashboard/head/head.component';
 import { TripsComponent } from './views/trips/trips.component';
+import { PaiementsComponent } from './views/paiements/paiements.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { TripsComponent } from './views/trips/trips.component';
     LogoutComponent,
     HeadComponent,
     TripsComponent,
+    PaiementsComponent,
   ],
   imports: [
     BrowserModule,

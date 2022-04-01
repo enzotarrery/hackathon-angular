@@ -1,0 +1,38 @@
+
+.dashboard-page {
+    display: flex;
+}
+
+.dashboard-content {
+    padding: 40px 35px;
+    flex: 1 1 80%;
+    min-height: 100vh;
+    background-color: #FAFBFF;
+}
+
+.dashboard-paiement{
+    &__credit{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        color: white;
+        width: 400px;
+        padding: 20px;
+        background: rgb(126, 201, 245);
+        background: linear-gradient(90deg, rgba(126, 201, 245, 1) 0%, rgba(57, 87, 237, 1) 100%);
+        border-radius: 10px 10px 0 0;
+
+        &-bottom{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            width: 400px;
+            color: #fff;
+            background-color: #4F4F4F;
+            border-radius: 0px 0px 10px 10px;
+        }
+    }
+
+    
+}

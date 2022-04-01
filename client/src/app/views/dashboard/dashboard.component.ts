@@ -84,17 +84,4 @@ export class DashboardComponent implements OnInit {
       this.tripPercentage = (this.trips$.filter(trip => trip.state == 'arrived').length / this.trips$.length)* 100      
     });
   }
-
-  /* searchStuff() {
-    this.stuffService.searchStuff(this.searchword).subscribe(response => {
-      let attributes = response.data.attributes;
-      
-      this.stuff = {
-        id : response.data.id,
-        label: attributes.label,
-        weight: attributes.weight,
-        volume: attributes.volume,
-      }
-    });
-  } */
 }

@@ -8,7 +8,9 @@
         <div class="dashboard-content__trips">
             <div class="dashboard-content__trips-heading">
                 <h2 class="dashboard-content__paiement-title">La liste de mes trajets</h2>
-                <button type="button" class="btn btn-danger">Voir les trajets</button>
+                <a routerLink="/dashboard/trips">
+                    <button type="button" class="btn btn-danger">Voir les trajets</button>
+                </a>
 
             </div>
 
@@ -16,18 +18,18 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Mes Marchandises</th>
-                            <th scope="col">Nom du beateau</th>
-                            <th scope="col">Prix</th>
-                            <th scope="col">Poids (kg)</th>
+                            <th class="p-4" scope="col">Mes Marchandises</th>
+                            <th class="p-4" scope="col">Nom du beateau</th>
+                            <th class="p-4" scope="col">Prix</th>
+                            <th class="p-4" scope="col">Poids (kg)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let trip of trips$">
-                            <th>{{trip.stuff?.label}}</th>
-                            <td>{{trip.boat?.name}}</td>
-                            <td>{{trip.stuff?.volume}}€</td>
-                            <td>{{trip.stuff?.weight}}</td>
+                            <th class="p-4">{{trip.stuff?.label}}</th>
+                            <td class="p-4">{{trip.boat?.name}}</td>
+                            <td class="p-4">{{trip.stuff?.volume}}€</td>
+                            <td class="p-4">{{trip.stuff?.weight}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -42,22 +44,24 @@
                 <div class="dashboard-content__trips dashboard-content__footer">
                     <div class="dashboard-content__paiement-heading">
                         <h2 class="dashboard-content__paiement-title">Mon historique des paiements</h2>
-                        <button type="button" class="btn btn-danger">Voir l'historique</button>
+                        <a routerLink="/dashboard/paiement">
+                            <button type=" button" class="btn btn-danger">Voir l'historique</button>
+                        </a>
                     </div>
                     <div class="dashboard-content__trips-list">
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Mes Marchandises</th>
-                                    <th scope="col">Prix</th>
-                                    <th scope="col">Poids (kg)</th>
+                                    <th class="p-4" scope="col">Mes Marchandises</th>
+                                    <th class="p-4" scope="col">Prix</th>
+                                    <th class="p-4" scope="col">Poids (kg)</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr *ngFor="let trip of trips$">
-                                    <td>{{trip.stuff?.label}}</td>
-                                    <td>{{trip.stuff?.volume}}€</td>
-                                    <td>{{trip.stuff?.weight}}</td>
+                                    <td class="p-4">{{trip.stuff?.label}}</td>
+                                    <td class="p-4">{{trip.stuff?.volume}}€</td>
+                                    <td class="p-4">{{trip.stuff?.weight}}</td>
                                 </tr>
                             </tbody>
                         </table>

@@ -4,6 +4,11 @@
     <h2 class="dashboard-nav__name">{{user?.username}}</h2>
     <p class="dashboard-nav__mail">{{user?.email}}</p>
   </div>
+  <div class="dashboard-nav__profil py-5">
+    <a class="dashboard-nav__link d-block" routerLink="/dashboard" routerLinkActive="active"><img
+        class="dashboard-nav__icon" src="assets/icons/user-square.svg" alt="">
+      Mon profil</a>
+  </div>
   <ul class="dashboard-nav__list">
     <li class="dashboard-nav__item">
       <a class="dashboard-nav__link" routerLink="/dashboard/trips" routerLinkActive="active"><img
