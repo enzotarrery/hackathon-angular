@@ -7,6 +7,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { HomeComponent } from './views/home/home.component';
 import { TripComponent } from './views/trip/trip.component';
+import { TripsComponent } from './views/trips/trips.component';
 
 const routes: Routes = [
   {
@@ -16,20 +17,26 @@ const routes: Routes = [
   {
     path: 'dashboard',
     canActivate: [GuardGuard],
-    component: DashboardComponent
-  },
-  {
-    path: 'trip',
-    children : [
-      // {
-      //   path : '',
-      //   component: TripListComponent,
-      // },
+    children: [
       {
-        path : ':id',
-        component : TripComponent
+        path: '',
+        component: DashboardComponent,
       },
-    ]
+      {
+        path: 'trips',
+        children: [
+          {
+            path : '',
+            component: TripsComponent,
+          },
+          {
+            path : ':id',
+            component : TripComponent
+          }
+        ]
+
+      },
+    ],
   },
   {
     path: 'login',

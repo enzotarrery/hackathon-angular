@@ -1,3 +1,7 @@
+
+import { Boat } from "./boat";
+import { Stuff } from "./stuff";
+
 export interface Trip {
   id: number;
   startDate: string,
@@ -28,5 +32,7 @@ export interface Trip {
         }
       }
     }
-  ]
+  ],
+  boat?: Boat,
+  stuff?: Stuff
 }

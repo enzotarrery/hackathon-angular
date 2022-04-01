@@ -20,6 +20,8 @@ import { TripService } from './core/services/trip.service';
 import { UserService } from './core/services/user.service';
 import { TokenStorageService } from './core/services/token-storage.service';
 import { LogoutComponent } from './auth/logout/logout.component';
+import { HeadComponent } from './shared/dashboard/head/head.component';
+import { TripsComponent } from './views/trips/trips.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { LogoutComponent } from './auth/logout/logout.component';
     LoginComponent,
     RegisterComponent,
     LogoutComponent,
+    HeadComponent,
+    TripsComponent,
   ],
   imports: [
     BrowserModule,

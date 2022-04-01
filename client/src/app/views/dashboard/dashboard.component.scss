@@ -1,0 +1,88 @@
+.dashboard-page{
+    display: flex;
+}
+
+.dashboard-content{
+    padding: 40px 35px;
+    flex: 1 1 80%;
+    min-height: 100vh;
+    background-color: #FAFBFF;
+
+    &__title{
+        font-weight: 500;
+        font-size: 24px;
+        padding-bottom: 15px;
+    }
+
+    &__heading{
+        background-color: #fff;
+        border-radius: 5px;
+        width: 100%;
+        padding: 25px;
+        padding-bottom: 0;
+    }
+
+    &__stats{
+        padding: 10px;
+    }
+
+    &__stat-name{
+        color: #acacac;
+        font-size: 14px;
+    }
+
+    &__stat-num{
+        font-size: 32px;
+        font-weight: 600;
+        color: #000;
+    }
+
+    &__trips{
+        margin-top: 45px;
+        background-color: #fff;
+        border-radius: 5px;
+        width: 100%;
+        padding: 25px;
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__paiement-heading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    &__paiement-title{
+        font-size: 22px;
+    }
+
+    &__percentage-title{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    &__percentage-subtitle{
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__percentage-text {
+        font-size: 14px;
+        text-align: center;
+        width: 50%;
+        margin: auto;
+    }
+    &__percentage-number {
+        display: block;
+        font-size: 22px;
+        font-weight: 500;
+    }
+}
