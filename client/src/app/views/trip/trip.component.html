@@ -58,11 +58,17 @@
       <div class="row">
        <div class="col-6 py-2">
         Place que vous souhaitez acheter:
-        <input type="number" [value]="trip.boat?.maxWeigth" >
+        <input type="number"
+          [value]="trip.boat?.maxWeigth"
+          (change)="setPrice($event)"
+        >
        </div>
        <div class="col-12">
         Le tarif: 
-        <span *ngIf="trip.boat">{{ trip.boat.maxWeigth / 3 }}</span>
+        <b><span *ngIf="price">{{ price | number }} €</span></b>
+       </div>
+       <div class="col-12">
+        <a routerLink="checkout" class="btn btn-warning mt-5">Acheter</a>
        </div>
       </div>
     </div>

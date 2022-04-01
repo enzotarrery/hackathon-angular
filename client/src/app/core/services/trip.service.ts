@@ -21,7 +21,7 @@ export class TripService {
       }),
     };
     return this.httpClient.get(
-      'http://localhost:1337/api/trips/' + id,
+      'http://localhost:1337/api/trips/' + id + '?populate=%2A',
       options
     );
   }
