@@ -39,6 +39,8 @@ export class TripComponent implements OnInit {
     strokeOpacity: 1.0,
     strokeWeight: 2,
   };
+  completion : number = 0;
+  completionPercent : string = "0%";
 
   constructor(
     private tripService : TripService,
@@ -83,6 +85,8 @@ export class TripComponent implements OnInit {
     .getCheckpoints()
     .subscribe(response => {
       let data = response.data
+      console.log(response);
+      
       let tripCheckpoints = data.filter((element : any) => {
         return element.attributes.trip.data.id == tripId
       })
@@ -117,7 +121,7 @@ export class TripComponent implements OnInit {
           lng: checkpoint.attributes.location.data.attributes.lon,
         },
         icon : image,
-        title: 'Marker title ' + (this.markers.length + 1),
+        title: 'Etape n°' + (this.markers.length + 1),
         options: { },
       });
 
@@ -125,6 +129,12 @@ export class TripComponent implements OnInit {
         lat: checkpoint.attributes.location.data.attributes.lat,
         lng: checkpoint.attributes.location.data.attributes.lon,
       })
+      
+      if (checkpoint.attributes.state.data.attributes.name == "passé") {
+        this.completion += 100 / (this.trip.checkpoints ? this.trip.checkpoints.length : 4)
+        this.completionPercent = `${this.completion}%`;
+      }
+
     })
 
     coords.sort((a,b) => {

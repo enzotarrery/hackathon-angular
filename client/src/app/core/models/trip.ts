@@ -19,6 +19,13 @@ export interface Trip {
             }
           }
         }
+        state : {
+          data : {
+            attributes : {
+              name : string
+            }
+          }
+        }
       }
     }
   ]

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "checkpoint",
     "pluralName": "checkpoints",
-    "displayName": "Checkpoint"
+    "displayName": "Checkpoint",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,6 +26,12 @@
       "relation": "oneToOne",
       "target": "api::location.location",
       "inversedBy": "checkpoint"
+    },
+    "state": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::location-state.location-state",
+      "inversedBy": "checkpoints"
     }
   }
 }
