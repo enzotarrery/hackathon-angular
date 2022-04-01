@@ -21,6 +21,7 @@ import { LogoutComponent } from './auth/logout/logout.component';
 import { HeadComponent } from './shared/dashboard/head/head.component';
 import { TripsComponent } from './views/trips/trips.component';
 import { PaiementsComponent } from './views/paiements/paiements.component';
+import { MytripsComponent } from './views/mytrips/mytrips.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { PaiementsComponent } from './views/paiements/paiements.component';
     HeadComponent,
     TripsComponent,
     PaiementsComponent,
+    MytripsComponent,
   ],
   imports: [
     BrowserModule,
