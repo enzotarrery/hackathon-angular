@@ -24,14 +24,19 @@ export class TripViewComponent implements OnInit {
 
   getBoatById() {
     let id = this.route.snapshot.paramMap.get('id');
+  
     if (id !== null) {
       this.tripService.getTripById(id).subscribe((response: any) => {
         const tripToShow = {
           id: response.data.id,
           ...response.data.attributes,
-          boat: {
-            id: response.data.attributes.boats.data[0].id,
-            ...response.data.attributes.boats.data[0].attributes
+        }
+        const boatData = response.data.attributes.boats.data;
+
+        if (boatData.length > 0) {
+          tripToShow.boat = {
+            id: boatData[0].id,
+            ...boatData[0].attributes
           }
         }
         this.trip = tripToShow as Trips;
