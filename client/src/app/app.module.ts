@@ -25,6 +25,11 @@ import { TripsComponent } from './views/trips/trips.component';
 import { PaiementsComponent } from './views/paiements/paiements.component';
 import { MytripsComponent } from './views/mytrips/mytrips.component';
 
+
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +55,9 @@ import { MytripsComponent } from './views/mytrips/mytrips.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    NoopAnimationsModule
   ],
   providers: [BoatService, TripService, UserService, TokenStorageService],
   bootstrap: [AppComponent],
