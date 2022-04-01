@@ -69,16 +69,20 @@ export class TripComponent implements OnInit {
     this.tripService
     .getTrip(tripId)
     .subscribe(response => {
-      let attributes = response.data.attributes;
-      
-      this.trip = {
-        id : response.data.id,
-        departure : attributes.departure,
-        destination : attributes.destination,
-        endDate : attributes.endDate,
-        startDate : attributes.startDate,
-        state : attributes.state,
+      const tripToShow = {
+        id: response.data.id,
+        ...response.data.attributes,
       }
+      const boatData = response.data.attributes.boats.data;
+
+      if (boatData.length > 0) {
+        tripToShow.boat = {
+          id: boatData[0].id,
+          ...boatData[0].attributes
+        }
+      }
+      this.trip = tripToShow as Trip;
+      console.log(this.trip)
     });
 
     this.checkpointService

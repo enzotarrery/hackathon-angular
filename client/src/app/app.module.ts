@@ -26,6 +26,11 @@ import { PaiementsComponent } from './views/paiements/paiements.component';
 import { MytripsComponent } from './views/mytrips/mytrips.component';
 import { CheckoutComponent } from './views/checkout/checkout.component';
 
+
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +57,9 @@ import { CheckoutComponent } from './views/checkout/checkout.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    NoopAnimationsModule
   ],
   providers: [BoatService, TripService, UserService, TokenStorageService],
   bootstrap: [AppComponent],
