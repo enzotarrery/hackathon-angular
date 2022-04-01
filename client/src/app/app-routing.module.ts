@@ -10,6 +10,7 @@ import { TripComponent } from './views/trip/trip.component';
 import { MytripsComponent } from './views/mytrips/mytrips.component';
 import { PaiementsComponent } from './views/paiements/paiements.component';
 import { TripsComponent } from './views/trips/trips.component';
+import { CheckoutComponent } from './views/checkout/checkout.component';
 
 const routes: Routes = [
   {
@@ -33,7 +34,16 @@ const routes: Routes = [
           },
           {
             path : ':id',
-            component : TripComponent
+            children: [
+              {
+                path : '',
+                component : TripComponent
+              },
+              {
+                path : 'checkout',
+                component : CheckoutComponent
+              }
+            ]
           }
         ]
 

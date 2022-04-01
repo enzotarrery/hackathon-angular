@@ -1,0 +1,26 @@
+.trips {
+    background-color: #fafbff;
+}
+
+.dashboard-page {
+    display: flex;
+}
+
+.dashboard-content {
+    padding: 40px 35px;
+    flex: 1 1 80%;
+    min-height: 100vh;
+    background-color: #FAFBFF;
+}
+
+.dashboard-checkout{
+    &__img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 20px auto;
+        width: 100%;
+        height: auto;
+    }
+}

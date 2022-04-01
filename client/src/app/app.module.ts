@@ -24,6 +24,7 @@ import { HeadComponent } from './shared/dashboard/head/head.component';
 import { TripsComponent } from './views/trips/trips.component';
 import { PaiementsComponent } from './views/paiements/paiements.component';
 import { MytripsComponent } from './views/mytrips/mytrips.component';
+import { CheckoutComponent } from './views/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { MytripsComponent } from './views/mytrips/mytrips.component';
     TripsComponent,
     PaiementsComponent,
     MytripsComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
