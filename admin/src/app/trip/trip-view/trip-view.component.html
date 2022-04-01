@@ -11,6 +11,7 @@
             <b>Destination:</b> {{ this.trip.destination }}<br>
             <b>Start Date:</b> {{ this.trip.startDate | date: 'short' }}<br>
             <b>End Date:</b> {{ this.trip.endDate | date: 'short'}}<br>
+            <b>State</b> {{ this.trip.state }}<br>
 
           </p>
           <ng-container *ngIf="trip.boat">
