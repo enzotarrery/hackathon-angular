@@ -2,7 +2,6 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { elementAt } from 'rxjs';
 import { Trips } from 'src/app/Model/trips';
 import { TripService } from 'src/app/services/trip/trip.service';
 
