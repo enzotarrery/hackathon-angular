@@ -5,4 +5,5 @@ export interface Stuff {
     label: string,
     weight: number,
     volume: number,
+    price?: number
 }

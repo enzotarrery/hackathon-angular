@@ -1,0 +1,55 @@
+<div class="dashboard-page">
+    <app-navbar></app-navbar>
+    <div class="dashboard-content m-4 rounded">
+        <h1 class="fs-2 fw-bold pb-3 ">Historique des paiements</h1>
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="dashboard-paiement__credit ">
+                    <div class="p-2">
+                        <p class="pt-5">name</p>
+                        <p *ngIf="user?.firstname; else defaultBlock" class="fs-4 fw-bold">{{user?.firstname}}
+                            {{user?.lastname}}</p>
+                        <ng-template #defaultBlock>Maxime</ng-template>
+                    </div>
+                    <div class="p-2">
+                        <p class="m-0">**** **** **** 3029</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 pb-3">
+            <div class=" dashboard-paiement__credit-bottom">
+                <div class="p-2">
+                    <p class="pt-5 fs-4 fw-bold">Exp 16/09</p>
+                </div>
+                <div class="p-2">
+                    <img src="assets/icons/visa.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <section class="d-flex flex-row justify-content-between gap-3 py-3 mt-5">
+            <h1 class="fs-2 fw-bold ">Liste des paiements</h1>
+            <input type="text" [(ngModel)]="searchword" (ngModelChange)="searchStuff()" placeholder="Recherche..." />
+        </section>
+        <div class="dashboard-content__trips-list">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="p-4" scope="col">Référence de paiements</th>
+                        <th class="p-4" scope="col">Marchandises</th>
+                        <th class="p-4" scope="col">Poids</th>
+                        <th class="p-4" scope="col">Montant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let stuff of stuff$">
+                        <th class="p-4">{{stuff.id}}</th>
+                        <td class="p-4">{{stuff.label}}</td>
+                        <td class="p-4">{{stuff.weight}}</td>
+                        <td class="p-4">{{stuff.price}}€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

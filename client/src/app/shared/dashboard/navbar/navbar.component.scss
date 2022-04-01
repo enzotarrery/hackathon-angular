@@ -54,5 +54,15 @@
         justify-content: center;
         text-decoration: none;
         color: #fff;
+        padding: 15px;
+        border-radius: 15px;
     }
+
+    &__credit{
+        padding-top: 15px;
+    }
+}
+
+.active{
+    background-color: #d8cbcb46;
 }
